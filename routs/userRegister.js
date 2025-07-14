@@ -6,5 +6,14 @@ const { usersignupcontroller, userslogincontroller } = require("../controllers/u
 //All user sign up info
 router.post("/signup",usersignupcontroller)
 router.post("/login",userslogincontroller)
-
+router.get("/",(req,res)=>{
+    res.send("hi")
+})
 module.exports = router
+
+
+
+
+
+
+

@@ -5,6 +5,7 @@ require("dotenv").config()
 const port = process.env.PORT || 3000
 const signup = require("./routs/userRegister")
 const connectDB = require("./config/connectDB")
+const Quize = require("./routs/Quize")
 connectDB()
 
 //for convert json or readable form data coming from frontend form
@@ -14,7 +15,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/",signup)
- 
+app.use("/api/quiz",Quize)
 app.listen(port,()=>{
     console.log(`Server started at port ${port}`)
 })
