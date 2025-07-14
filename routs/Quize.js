@@ -6,7 +6,7 @@ const genral = require("../Quize/GenralQuze.json")
 const math = require("../Quize/Math.json")
 router.get("/:id", (req, res) => {
     const id = req.params.id
-
+ 
     if (id === "coding") {
        return res.status(200).json({ 'coding':coding })
     }
