@@ -13,9 +13,7 @@ app.use(express.json())
 
 //for getting request from all port from frontend
 app.use(cors())
-app.get("/hey",(req,res)=>{
-    res.json({message:"this is working"})
-})
+
 app.use("/",signup)
 app.use("/api/quiz",Quize)
 app.listen(port,()=>{
